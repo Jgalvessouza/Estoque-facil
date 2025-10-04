@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extoque Fácil</title>
+
+    <style>
+        body {
+            background-color: #aebabd;
+            color: rgb(18, 19, 19);
+        }
+
+        header {
+            background: linear-gradient(135deg, #001b22, azure);
+            color: rgb(5, 5, 5);
+            text-align: center;
+            padding: 2rem 1rem;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 1.1);
+            ;
+        }
+
+        header h1 {
+            font-size: 2.8rem;
+            margin: 0;
+        }
+
+        header p {
+            margin-top: .5rem;
+            font-weight: 300;
+        }
+
+        .apresetacao {
+            color: azure;
+            background-color: #001b22;
+            padding: 20px;
+            margin-bottom: 50px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 1.1);
+            border-color: rgb(8, 8, 8);
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+
+        .apresetacao h1 {
+            text-align: center;
+            font-size: 10vh;
+        }
+
+        img {
+            width: 380px;
+            height: 560;
+        }
+
+        .img-flutuante {
+            width: 780px;
+            height: auto;
+            /* Mantém a proporção */
+
+            /* O ESSENCIAL: Faz a imagem flutuar à direita */
+            float: right;
+
+            /* Adiciona margem para não colar na lista/texto */
+            margin-left: 20px;
+            margin-bottom: 5vh;
+            margin-top: 5vh;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .secao-dupla {
+            display: flex;
+            /* Habilita o Flexbox */
+            gap: 40px;
+            /* Espaço entre as duas colunas */
+            align-items: center;
+            /* Garante que o conteúdo comece no topo (útil se as alturas forem diferentes) */
+            margin: 25vh;
+            margin-top: 20vh;
+        }
+
+        /* 2. Estilo para a Coluna de Texto */
+        .texto-coluna {
+            max-width: 500px;
+            flex-grow: 0;
+
+            font-size: 3vh;
+
+
+        }
+
+        /* 3. Estilo para a Coluna da Imagem */
+        .imagem-coluna {
+            /* Garante que a coluna da imagem tenha uma largura fixa e não encolha */
+            flex-shrink: 0;
+        }
+
+        /* 4. Estilo Específico da Imagem */
+        .imagem-coluna img {
+            max-width: 100%;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 1.1);
+            transition: transform .3s;
+        }
+
+        .imagem-coluna img:hover {
+            transform: scale(1.03);
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background: #001b22;
+            color: white;
+            margin-top: 3rem;
+            border-radius: 25px;
+        }
+
+        .whats-link {
+            display: inline-block;
+            background: linear-gradient(135deg, #001b22, azure);
+            color:#001b22;
+            padding: 5px 5px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+            margin: 10px;
+        }
+
+        .whats-link:hover {
+            background-color: #72ec9d;
+            transform: scale(1.05);
+        }
+
+
+        /* Opcional: Para telas pequenas, coloca os elementos um embaixo do outro */
+        @media (max-width: 900px) {
+            .apresetacao h1 {
+                font-size: 2.0rem;
+            }
+
+            .secao-dupla {
+                flex-direction: column;
+                /* Altera para empilhar verticalmente */
+                justify-content: center;
+                margin: 60px;
+            }
+
+            .texto-coluna {
+                font-size: 0.8rem;
+                padding: 30px;
+                text-align: left;
+            }
+
+            .imagem-coluna {
+                display: flex;
+                width: 320px;
+                height: auto;
+            }
+
+            .img-flutuante {
+                width: 320px;
+            }
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <header>
+        <h1>EstoqueFácil</h1>
+        <p>Simplicidade, praticidade e organização no gerenciamento de estoque</p>
+    </header>
+    <div class="apresetacao">
+        <p>O EstoqueFácil é um sistema desenvolvido com foco em simplicidade, praticidade e organização, projetado para
+            auxiliar no gerenciamento de produtos e fornecedores dentro da Secretaria de Assistência Social de
+            Arcoverde.
+        </p>
+        Com ele, é possível:
+
+        <picture>
+            <source media="(max-width:1000px )" srcset="img/EstoquefacioM.png" type="image/png">
+            <source media="(max-width:780px )" srcset="img/EstoquefacioP.png" type="image/png">
+            <img class="img-flutuante" src="img/EstoqueFacio.png" alt="Imagem telas do programa">
+        </picture>
+        <ul>
+            <li><strong>Realizar o cadastro e controle de fornecedores;</strong></li>
+            <li><strong>Registrar e atualizar produtos, preços, quantidades e vínculos com fornecedores;</strong> </li>
+            <li><strong>Acompanhar de forma clara todas as movimentações de entrada e saída de estoque;</strong></li>
+            <li><strong>
+                Exportar relatórios completos em diferentes formatos, como CSV e Excel, além de gerar formulários de
+                    estoque
+                    atual, gastos e saídas;
+            </strong></li>
+            <li><strong>Administrar com segurança os usuários do sistema, garantindo controle de acessos.</strong></li>
+        </ul>
+
+        <p>O sistema foi desenvolvido inicialmente como um projeto de estudo, mas adaptado e cedido para uso prático,
+            oferecendo uma ferramenta eficiente para o planejamento, organização e tomada de decisões dentro da
+            secretaria.
+        </p>
+    </div>
+
+
+
+    <div class="secao-dupla">
+        <div class="texto-coluna">
+            <h2>1. Tela de Login:</h2>
+            <p>
+                A tela inicial do sistema garante o acesso seguro às funcionalidades, permitindo que apenas usuários
+                autorizados
+                possam entrar.
+                Nela, o usuário deve informar login e senha para acessar o sistema de estoque. Esse controle de acesso é
+                fundamental para manter a integridade dos dados.
+            </p>
+        </div>
+        <div class="imagem-coluna">
+            <img src="img/logim.png" alt="Imagem de loguim" style="width: 200px; height: auto; margin-left: 50px;">
+        </div>
+    </div>
+
+    <div class="secao-dupla">
+        <div class="texto-coluna">
+            <h2>2. Tela de Fornecedores</h2>
+            <p>
+                Nesta tela, o usuário pode cadastrar, atualizar, pesquisar e excluir fornecedores.
+                Cada fornecedor possui ID, nome e contato, facilitando a gestão de quem fornece os produtos para a
+                secretaria.
+                Os botões de ação permitem um gerenciamento prático, garantindo que os dados estejam sempre atualizados.
+            </p>
+        </div>
+        <div class="imagem-coluna">
+            <img src="img/interface_estoque.png" alt="Imagem de estoque" style="width: 600px; height: auto;">
+        </div>
+    </div>
+
+    <div class="secao-dupla">
+        <div class="texto-coluna">
+            <h2>3. Tela de Produtos</h2>
+            <p>
+                A tela de produtos permite o cadastro e controle dos itens em estoque.
+                O usuário pode registrar nome, preço, quantidade e fornecedor de cada produto.
+                Há também recursos para pesquisar, atualizar e excluir registros, além de relacionar os produtos
+                diretamente aos
+                fornecedores cadastrados.
+            </p>
+        </div>
+        <div class="imagem-coluna">
+            <img src="img/interface_Produtos.png" alt="Imagem de produtos" style="width: 600px; height: auto;">
+        </div>
+    </div>
+    <div class="secao-dupla">
+
+        <div class="texto-coluna">
+            <h2>4. Tela de Movimentações</h2>
+            <p>
+                Essa tela registra todas as entradas e saídas de produtos do estoque.
+                O usuário seleciona o produto, define o tipo de movimentação (entrada ou saída), insere a quantidade e
+                pode
+                adicionar observações (como setor de destino).
+                Um histórico detalhado fica disponível, mostrando data, hora, quantidade e setor responsável, permitindo
+                total
+                rastreabilidade das movimentações.
+            </p>
+        </div>
+        <div class="imagem-coluna">
+            <img src="img/interface_Movi.png" alt="Imagem de movimentção" style="width: 600px; height: auto;">
+        </div>
+    </div>
+
+    <div class="secao-dupla">
+        <div class="texto-coluna">
+            <h2>5. Tela de Exportação de Relatórios</h2>
+            <div class="imagem-coluna">
+                <img src="img/interface_relat.png" alt="Imagem de relatorio "
+                    style="width: 400px; height: auto; margin: 20px;">
+            </div>
+            <ol>
+                <p>
+                    Por meio do menu Arquivo, o sistema oferece opções de exportação de relatórios em diferentes
+                    formatos e
+                    finalidades.
+                    Além da exportação em CSV, que pode ser aberta em planilhas como Excel ou LibreOffice, o sistema
+                    também
+                    possibilita a geração de três tipos de formulários específicos:
+
+                <ol>
+                    <li><strong>Relatório de Estoque Atual</strong></li> → apresenta todos os produtos cadastrados, suas quantidades
+                    disponíveis
+                    e fornecedores, permitindo uma visão clara da situação do estoque.
+                    <li><strong>Relatório de Gastos</strong></li> → detalha os custos relacionados às compras e entradas de produtos,
+                    auxiliando
+                    no controle financeiro da secretaria.
+
+                    <li><strong>Relatório de Saídas</strong></li> → mostra de forma organizada todos os itens retirados do estoque,
+                    informando
+                    data, quantidade e setor responsável.
+                </ol>
+                <div class="imagem-coluna">
+                    <img src="img/interface_relatrios.png" alt="Imagem de relatorio "
+                        style="width: 260px; height: auto; margin: 20px;">
+                </div>
+                Essas opções tornam o sistema mais flexível, permitindo que a gestão escolha o tipo de relatório mais
+                adequado
+                para cada necessidade de análise ou prestação de contas.
+                </p>
+            </ol>
+        </div>
+
+        <div class="imagem-coluna">
+            <img src="img/interface_exel.png" alt="Imagem de relatorio " style="width: 600px; height: auto;">
+        </div>
+
+    </div>
+
+    <footer>
+        &copy; 2025 EstoqueFácil — Sistema de Gestão de Estoque
+        <address>jg-alves-souza@hotmail.com</address>
+        <address ><a class="whats-link" href="https://w.app/hip9nz" target="_blank">whatssap:(87) 991957043</a></address>
+    </footer>
+</body>
+
+</html>
